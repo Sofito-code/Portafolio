@@ -19,17 +19,14 @@ const tools = computed(() => profileData.tools);
             <!-- Carrusel de Proyectos -->
             <ProjectsCarousel :projects="projectsData" />
 
+            <!-- Habilidades -->
+            <SkillsNTools :skills="skills" :tools="tools" />
+
             <!-- Experiencia & Educación -->
             <ExperienceEducation
+                :contact="heroData.contact"
                 :experiences="profileData.experiences"
                 :education="profileData.education"
-            />
-
-            <!-- Habilidades -->
-            <SkillsNTools
-                :contact="heroData.contact"
-                :skills="skills"
-                :tools="tools"
             />
         </main>
     </div>

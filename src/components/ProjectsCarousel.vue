@@ -29,7 +29,8 @@ function prev() {
 const dragStartX = ref<number | null>(null);
 const dragging = ref(false);
 const suppressClick = ref(false);
-const DRAG_THRESHOLD = 150;
+const pointerCaptured = ref(false);
+const DRAG_THRESHOLD = 60;
 const CLICK_SLOP = 10;
 
 function onDragStart(event: PointerEvent) {
@@ -37,13 +38,26 @@ function onDragStart(event: PointerEvent) {
     dragging.value = true;
     suppressClick.value = false;
     dragStartX.value = event.clientX;
-    (event.currentTarget as HTMLElement).setPointerCapture(event.pointerId);
+    // La captura del puntero se hace al primer movimiento real (ver onDragMove),
+    // para no robar el click de las flechas y botones del carrusel.
 }
 
 function onDragMove(event: PointerEvent) {
     if (!dragging.value || dragStartX.value === null) return;
     const delta = event.clientX - dragStartX.value;
-    if (Math.abs(delta) > CLICK_SLOP) suppressClick.value = true;
+    if (Math.abs(delta) > CLICK_SLOP) {
+        suppressClick.value = true;
+        if (!pointerCaptured.value) {
+            try {
+                (event.currentTarget as HTMLElement).setPointerCapture(
+                    event.pointerId,
+                );
+                pointerCaptured.value = true;
+            } catch {
+                // el puntero ya no está activo; se ignora
+            }
+        }
+    }
     // Cada DRAG_THRESHOLD px de arrastre avanza un slide (proporcional)
     const steps = Math.trunc(delta / DRAG_THRESHOLD);
     if (steps !== 0) {
@@ -59,6 +73,7 @@ function onDragMove(event: PointerEvent) {
 function onDragEnd() {
     dragging.value = false;
     dragStartX.value = null;
+    pointerCaptured.value = false;
     setTimeout(() => {
         suppressClick.value = false;
     }, 0);

@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import type { ContactInfo, SkillCategory, ToolCategory } from "../types";
-
-import linkedinIcon from "../assets/images/linkedin.svg";
-import githubIcon from "../assets/images/github.svg";
-import itchioIcon from "../assets/images/itchio.svg";
-import cvIcon from "../assets/images/cv.svg";
+import type { SkillCategory, ToolCategory } from "../types";
 
 defineProps<{
-    contact: ContactInfo;
     skills: SkillCategory[];
     tools: ToolCategory[];
 }>();
@@ -62,63 +56,6 @@ defineProps<{
                         </span>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Footer social / copy -->
-        <div class="footer-meta">
-            <div class="footer-socials">
-                <a
-                    v-if="contact.linkedin"
-                    :href="contact.linkedin"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="LinkedIn"
-                    class="social-link"
-                >
-                    <img :src="linkedinIcon" alt="" class="social-icon-img" />
-                </a>
-                <a
-                    v-if="contact.github"
-                    :href="contact.github"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub"
-                    class="social-link"
-                >
-                    <img :src="githubIcon" alt="" class="social-icon-img" />
-                </a>
-                <a
-                    v-if="contact.itch"
-                    :href="contact.itch"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Itch.io"
-                    class="social-link"
-                >
-                    <img :src="itchioIcon" alt="" class="social-icon-img" />
-                </a>
-                <a
-                    v-if="contact.cv"
-                    :href="contact.cv"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="CV"
-                    class="social-link"
-                >
-                    <img :src="cvIcon" alt="" class="social-icon-img" />
-                </a>
-                <a
-                    v-if="contact.email"
-                    :href="`mailto:${contact.email}`"
-                    aria-label="Email"
-                    class="social-link"
-                >
-                    <span class="social-icon">✉️</span>
-                </a>
-            </div>
-            <div class="footer-copy">
-                © {{ new Date().getFullYear() }} · Sofia Vanegas Cordoba
             </div>
         </div>
     </footer>
@@ -204,77 +141,10 @@ defineProps<{
     border-color: rgba(168, 85, 247, 0.3);
 }
 
-/* Footer meta */
-.footer-meta {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 2px dashed var(--color-border);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-socials {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.social-link {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    text-decoration: none;
-    border-radius: 14px;
-    border: 2px solid var(--color-border);
-    background: var(--color-bg);
-    transition: all 0.2s ease;
-    box-shadow: 0 3px 0 rgba(124, 58, 237, 0.3);
-}
-
-.social-link:hover {
-    border-color: var(--color-primary);
-    background: rgba(168, 85, 247, 0.12);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(124, 58, 237, 0.35);
-}
-
-.social-link:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 0 rgba(124, 58, 237, 0.3);
-}
-
-.social-icon-img {
-    width: 24px;
-    height: 24px;
-    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.3));
-}
-
-.social-icon {
-    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.3));
-    line-height: 1;
-}
-
-.footer-copy {
-    font-size: 0.85rem;
-    color: var(--color-text-dim);
-    opacity: 0.7;
-}
-
 @media (max-width: 720px) {
     .habilidades-grid {
         grid-template-columns: 1fr;
         gap: 1.8rem;
-    }
-
-    .footer-meta {
-        flex-direction: column;
-        gap: 0.8rem;
-        align-items: center;
-        text-align: center;
     }
 }
 </style>
