@@ -1,65 +1,63 @@
 export interface HeroData {
-  name: string
-  role: string
-  about: string
-  softSkills: string
-  hardSkills: string
-  contact: ContactInfo
-  photoPath: string
+  name: string;
+  role: string;
+  about: string;
+  contact: ContactInfo;
+  photoPath: string;
 }
 
 export interface ContactInfo {
-  linkedin?: string
-  github?: string
-  itch?: string
-  cv?: string
-  email?: string
+  linkedin?: string;
+  github?: string;
+  itch?: string;
+  cv?: string;
+  email?: string;
 }
 
 export interface JobExperience {
-  company: string
-  location: string
-  period: string
-  role: string
-  achievements: string[]
+  company: string;
+  location: string;
+  period: string;
+  role: string;
+  achievements: string[];
 }
 
 export interface Education {
-  institution: string
-  location: string
-  period: string
-  degree: string
+  institution: string;
+  location: string;
+  period: string;
+  degree: string;
 }
 
 export interface SkillCategory {
-  category: string
-  items: string[]
+  category: string;
+  items: string[];
 }
 
 export interface ToolCategory {
-  category: string
-  items: string[]
+  category: string;
+  items: string[];
 }
 
 export interface ProfileData {
-  experiences: JobExperience[]
-  education: Education[]
-  skills: SkillCategory[]
-  tools: ToolCategory[]
-  cvPath: string
+  experiences: JobExperience[];
+  education: Education[];
+  skills: SkillCategory[];
+  tools: ToolCategory[];
+  cvPath: string;
 }
 
 export interface ProjectData {
-  id: string
-  name: string
-  year: string
-  genre: string
-  platform: string
-  description: string
-  categories: string[]
-  responsibilities: string
-  playLink?: string
-  repoLink?: string
-  gifPath: string
-  thumbnailPath: string
+  id: string;
+  name: string;
+  year: string;
+  genre: string;
+  platform: string;
+  description: string;
+  categories: string[];
+  responsibilities: string;
+  playLink?: string;
+  repoLink?: string;
+  gifPath: string;
+  thumbnailPath: string;
 }
