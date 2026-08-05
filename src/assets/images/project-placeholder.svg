@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#111122" rx="8"/>
+  <rect x="2" y="2" width="636" height="356" fill="none" stroke="#7c3aed" stroke-width="1" rx="6" stroke-dasharray="6 4"/>
+  <polygon points="320,140 290,200 350,200" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <rect x="290" y="200" width="60" height="40" fill="none" stroke="#a855f7" stroke-width="1" rx="4"/>
+  <text x="320" y="280" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="13">[ GIF DEL JUEGO ]</text>
+  <text x="320" y="340" text-anchor="middle" fill="#4a3a6e" font-family="monospace" font-size="10">Reemplazar con gameplay GIF</text>
+</svg>
