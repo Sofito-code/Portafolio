@@ -46,6 +46,16 @@ const aboutHtml = computed(() => {
 
         <div class="sobre-mi-right">
             <div class="info-header">
+                <div class="nombre-box">
+                    {{ data.name }}
+                    <small>{{ data.role }}</small>
+                </div>
+            </div>
+
+            <div class="bio-box">
+                <p class="bio-text" v-html="aboutHtml"></p>
+            </div>
+            <div class="info-header">
                 <div class="iconos-box">
                     <a
                         v-if="data.contact.linkedin"
@@ -88,14 +98,6 @@ const aboutHtml = computed(() => {
                         <img :src="cvIcon" alt="" class="icono-img" />
                     </a>
                 </div>
-                <div class="nombre-box">
-                    {{ data.name }}
-                    <small>· {{ data.role }}</small>
-                </div>
-            </div>
-
-            <div class="bio-box">
-                <p class="bio-text" v-html="aboutHtml"></p>
             </div>
         </div>
     </section>
@@ -105,8 +107,8 @@ const aboutHtml = computed(() => {
 .sobre-mi-grid {
     display: grid;
     /* Columnas proporcionales: foto y contenido escalan juntos.
-       Cambia el ratio (1fr 3fr) para ajustar la proporción. */
-    grid-template-columns: minmax(130px, 1fr) minmax(0, 3fr);
+       Cambia el ratio (1fr 6fr) para ajustar la proporción. */
+    grid-template-columns: minmax(80px, 1fr) minmax(0, 6fr);
     gap: clamp(1.25rem, 3vw, 2.5rem);
     align-items: stretch;
 }
@@ -114,7 +116,7 @@ const aboutHtml = computed(() => {
 .foto-box {
     border: 3px solid var(--color-primary);
     border-radius: 40px 40px 40px 8px;
-    min-height: 130px;
+    min-height: 80px;
     min-width: 0;
     display: flex;
     align-items: center;
@@ -149,6 +151,9 @@ const aboutHtml = computed(() => {
 .iconos-box {
     border: 2px solid var(--color-border);
     border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.65rem 2.1rem;
     background: var(--color-bg);
     display: flex;
@@ -179,6 +184,7 @@ const aboutHtml = computed(() => {
 }
 
 .nombre-box {
+    font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 700;
     border-bottom: 4px solid var(--color-primary);
@@ -192,7 +198,7 @@ const aboutHtml = computed(() => {
 
 .nombre-box small {
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 1.8rem;
     color: var(--color-primary-glow);
     border-left: 2px solid var(--color-border);
     padding-left: 0.8rem;

@@ -44,7 +44,6 @@ export interface ProfileData {
   education: Education[];
   skills: SkillCategory[];
   tools: ToolCategory[];
-  cvPath: string;
 }
 
 export interface ProjectData {
@@ -53,11 +52,11 @@ export interface ProjectData {
   year: string;
   genre: string;
   platform: string;
+  gifPath: string;
+  iconPath: string;
   description: string;
   categories: string[];
-  responsibilities: string;
+  responsibilities: string[];
   playLink?: string;
   repoLink?: string;
-  gifPath: string;
-  thumbnailPath: string;
 }

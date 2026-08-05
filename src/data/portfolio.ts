@@ -1,8 +1,17 @@
 import type { HeroData, ProfileData, ProjectData } from "../types";
 
-import heroPlaceholder from "../assets/images/FotoSofia.jpg";
-import projectPlaceholder from "../assets/images/project-placeholder.svg";
-import projectThumbPlaceholder from "../assets/images/project-thumb-placeholder.svg";
+import fotoSofia from "../assets/images/FotoSofia.jpg";
+
+import mathyx from "../assets/images/proyects/pics/mathyx.png";
+import iconmathyx from "../assets/images/proyects/icons/mathyx.png";
+import lacosecha from "../assets/images/proyects/pics/lacosecha.png";
+import iconlacosecha from "../assets/images/proyects/icons/lacosecha.png";
+import axipet from "../assets/images/proyects/pics/axipet.png";
+import iconaxipet from "../assets/images/proyects/icons/axipet.png";
+import caminoalacalidad from "../assets/images/proyects/pics/caminoalacalidad.png";
+import iconcaminoalacalidad from "../assets/images/proyects/icons/caminoalacalidad.png";
+import energysaving from "../assets/images/proyects/pics/energysaving.png";
+import iconenergysaving from "../assets/images/proyects/icons/energysaving.png";
 
 export const heroData: HeroData = {
   name: "Sofia Vanegas Cordoba",
@@ -15,8 +24,154 @@ export const heroData: HeroData = {
     itch: "https://sofia-vc.itch.io/",
     cv: "https://drive.google.com/uc?export=download&id=1TOa5aOQVx66mw3-JLYVp5803WjZqvxkA",
   },
-  photoPath: heroPlaceholder,
+  photoPath: fotoSofia,
 };
+
+export const projectsData: ProjectData[] = [
+  {
+    id: "math-yx",
+    name: "Math/yx",
+    year: "2026",
+    genre: "Educativo",
+    platform: "Android y Navegador Android",
+    gifPath: mathyx,
+    iconPath: iconmathyx,
+    description:
+      "Math/yx es un videojuego educativo móvil desarrollado en solitario en Unity, diseñado para que estudiantes de octavo grado superen el rechazo hacia las fracciones mediante gamificación, con una ruta interactiva inspirada en el Cerro Quitasol (Bello).",
+    categories: ["Codificación", "Artista Técnica", "UX/UI", "Narrativa"],
+    responsibilities: [
+      "Integré los gráficos en una interfaz móvil horizontal táctil, diseñando el flujo visual de la ruta del Cerro Quitasol.",
+      "Diseñé la UI con gamificación y refuerzo positivo (pistas y reintentos) para mejorar la retención sin penalizar el error.",
+      "Optimicé el build para Android (LODs, lightmaps, compresión ASTC) con fallback offline en JSON.",
+    ],
+    playLink: "https://sofia-vc.itch.io/mathyx",
+    repoLink: "#",
+  },
+  {
+    id: "la-cosecha",
+    name: "La Cosecha",
+    year: "2025",
+    genre: "Simulación",
+    platform: "Android",
+    gifPath: lacosecha,
+    iconPath: iconlacosecha,
+    description:
+      "La Cosecha es un juego diseñado y programado pensando en la accesibilidad del adulto mayor de 60+ años, con un tablero interactivo de parcelas simétricas para el trabajo de memoria espacial y orientación, funcionando como herramienta de apoyo en pruebas médicas de Alzheimer.",
+    categories: ["Codificación", "Artista Técnica", "UX/UI"],
+    responsibilities: [
+      "Diseñé y programé un tablero interactivo de parcelas simétricas para una interacción limpia y directa con elementos 2D y 3D.",
+      "Di vida a las mecánicas de memoria espacial y orientación mediante retroalimentación visual clara (animaciones al seleccionar cultivos).",
+      "Adapté la accesibilidad de la interfaz al adulto mayor, apoyando su uso como herramienta de soporte en pruebas médicas de Alzheimer.",
+    ],
+    playLink: "#",
+    repoLink: "#",
+  },
+  /*/{
+    id: "deep-diving",
+    name: "Deep Diving",
+    year: "2026",
+    genre: "Survival",
+    platform: "Navegador PC",
+    gifPath: mathyx,
+    iconPath: iconmathyx,
+    description: "[Descripción general del juego — completar más tarde]",
+    categories: [
+      "Codificación",
+      "Artista Técnica",
+      "UX/UI",
+      "Arte",
+      "Narrativa",
+    ],
+    responsibilities: [
+      "[Responsabilidad 1 — completar más tarde]",
+      "[Responsabilidad 2 — completar más tarde]",
+      "[Responsabilidad 3 — completar más tarde]",
+    ],
+    playLink: "https://nairbio.itch.io/deepdiving",
+    repoLink: "https://github.com/9401Daniel/GAMEJAM-2_Deeper-Deeper",
+  },
+  {
+    id: "fatal-mixture",
+    name: "Fatal Mixture",
+    year: "2026",
+    genre: "[Género]",
+    platform: "[Plataforma]",
+    gifPath: mathyx,
+    iconPath: iconmathyx,
+    description: "[Descripción general del juego — completar más tarde]",
+    categories: [
+      "Codificación",
+      "Artista Técnica",
+      "UX/UI",
+      "Arte",
+      "Narrativa",
+    ],
+    responsibilities: [
+      "[Responsabilidad 1 — completar más tarde]",
+      "[Responsabilidad 2 — completar más tarde]",
+      "[Responsabilidad 3 — completar más tarde]",
+    ],
+    playLink: "https://sofia-vc.itch.io/fatal-mixture",
+    repoLink: "https://github.com/thisisvalen/GameJam-You-Shouldnt-Mix-Those.git",
+  },*/
+  {
+    id: "axipet",
+    name: "AxiPet",
+    year: "2025",
+    genre: "Mascota Virtual",
+    platform: "Web",
+    gifPath: axipet,
+    iconPath: iconaxipet,
+    description:
+      "AxiPet es una mascota virtual tipo Tamagotchi de un ajolote en Pixel Art, desarrollada para la Virtual Pet GameJam, con una interfaz móvil colorida y atractiva pensada para todo público desde los 5 años.",
+    categories: ["Codificación", "Artista Técnica", "Diseño de juego"],
+    responsibilities: [
+      "Programé la lógica interactiva del sistema de cuidados (alimentación, felicidad y edad) a partir de las tiras de animación en Pixel Art.",
+      "Desarrollé los menús en pantalla de una interfaz móvil colorida y atractiva para todo público.",
+      "Adapté el estilo retro (Pixel Art) a una experiencia de arte digital interactivo contemporánea.",
+    ],
+    playLink: "https://gamemostron.itch.io/axipet",
+    repoLink: "https://github.com/felipearredondo08/AxiPetJam.git",
+  },
+  {
+    id: "camino-a-la-calidad",
+    name: "Camino a la Calidad",
+    year: "2022",
+    genre: "Educativo",
+    platform: "Windows",
+    gifPath: caminoalacalidad,
+    iconPath: iconcaminoalacalidad,
+    description:
+      "Camino a la Calidad es una simulación interactiva con un enfoque de UI limpio y funcional, diseñada para guiar a profesores universitarios a través de los procesos de autoevaluación y acreditación de programas de educación superior en Colombia.",
+    categories: ["Codificación", "Artista Técnica", "UX/UI", "Arte"],
+    responsibilities: [
+      "Diseñé la experiencia de usuario (UX) mediante escenas que integran preguntas de opción múltiple con simulación interactiva.",
+      "Construí un flujo visual dinámico para guiar al usuario por los procesos de autoevaluación y acreditación.",
+      "Apliqué ingeniería de software y diseño interactivo para gamificar un proceso institucional complejo.",
+    ],
+    playLink: "#",
+    repoLink: "#",
+  },
+  {
+    id: "energy-saving",
+    name: "Energy Saving",
+    year: "2019",
+    genre: "Lógica",
+    platform: "Windows",
+    gifPath: energysaving,
+    iconPath: iconenergysaving,
+    description:
+      "Energy Saving es un puzzle de lógica que traduce un algoritmo matemático en una interfaz minimalista: una matriz interactiva de bombillos donde cada clic altera el estado de las casillas vecinas, generando conciencia sobre el ahorro energético.",
+    categories: ["Codificación", "Artista Técnica", "UX/UI", "Arte"],
+    responsibilities: [
+      "Programé y diseñé la matriz interactiva de bombillos y su lógica de alteración de casillas vecinas.",
+      "Diseñé una paleta de colores contrastante y minimalista para una interfaz gráfica intuitiva.",
+      "Implementé el sistema de instrucciones, intentos y tiempo en pantalla como herramienta de ejercicio lógico.",
+    ],
+    playLink: "#",
+    repoLink: "#",
+  },
+];
 
 export const profileData: ProfileData = {
   experiences: [
@@ -87,16 +242,24 @@ export const profileData: ProfileData = {
   ],
   skills: [
     {
-      category: "Diseño de juegos",
+      category: "Producción",
       items: [
-        "Diseño de juegos generalista",
+        "Diseño de Juegos (Generalista)",
         "Diseño narrativo",
         "Gamificación",
+        "Marco de trabajo Scrum",
+        "Documentación de diseño",
       ],
     },
     {
-      category: "Producción",
-      items: ["Marco de trabajo Scrum"],
+      category: "Habilidades de poder",
+      items: [
+        "Liderazgo",
+        "Trabajo en equipo",
+        "Comunicación assertiva",
+        "Detalle de atención",
+        "Gestión de proyectos",
+      ],
     },
     {
       category: "Languages",
@@ -109,8 +272,8 @@ export const profileData: ProfileData = {
       items: ["Unity Engine (Especialista)", "Unreal Engine 5 (Exploratorio)"],
     },
     {
-      category: "Source Control",
-      items: ["Git (Gitflow)", "GitHub", "GitLab"],
+      category: "Control de Versiones",
+      items: ["Gitflow", "GitHub", "GitLab", "CodeCommit"],
     },
     {
       category: "Producción",
@@ -120,156 +283,9 @@ export const profileData: ProfileData = {
       category: "Comunicación",
       items: ["Slack", "Discord", "Microsoft Teams"],
     },
+    {
+      category: "Productividad",
+      items: ["GitHub Copilot", "DeepSeek", "Zed IDE"],
+    },
   ],
-  cvPath: "#",
 };
-
-export const projectsData: ProjectData[] = [
-  {
-    id: "math-yx",
-    name: "Math/yx",
-    year: "2026",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "la-cosecha",
-    name: "La Cosecha",
-    year: "2025",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "deep-diving",
-    name: "DeepDiving",
-    year: "2026",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "fatal-mixture",
-    name: "Fatal Mixture",
-    year: "2026",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "axipet",
-    name: "AxiPet",
-    year: "2025",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "camino-a-la-calidad",
-    name: "Camino a la Calidad",
-    year: "2022",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-  {
-    id: "energy-saving",
-    name: "Energy Saving",
-    year: "2019",
-    genre: "[Género]",
-    platform: "[Plataforma]",
-    description: "[Descripción general del juego — completar más tarde]",
-    categories: [
-      "Codificación",
-      "Artista Técnica",
-      "UX/UI",
-      "Arte",
-      "Narrativa",
-    ],
-    responsibilities:
-      "[Responsabilidades en el juego descrito como solución a problemas técnicos — completar más tarde]",
-    gifPath: projectPlaceholder,
-    thumbnailPath: projectThumbPlaceholder,
-    playLink: "#",
-    repoLink: "#",
-  },
-];
