@@ -6,6 +6,7 @@ import linkedinIcon from "../assets/images/linkedin.svg";
 import githubIcon from "../assets/images/github.svg";
 import itchioIcon from "../assets/images/itchio.svg";
 import cvIcon from "../assets/images/cv.svg";
+import emailIcon from "../assets/images/email.svg";
 
 // Palabras clave a resaltar en negrita dentro de data.about
 const aboutKeywords = [
@@ -96,6 +97,16 @@ const aboutHtml = computed(() => {
                         aria-label="Descargar CV"
                     >
                         <img :src="cvIcon" alt="" class="icono-img" />
+                    </a>
+                    <a
+                        v-if="data.contact.email"
+                        :href="data.contact.email"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="icono-link"
+                        aria-label="Email"
+                    >
+                        <img :src="emailIcon" alt="" class="icono-img" />
                     </a>
                 </div>
             </div>

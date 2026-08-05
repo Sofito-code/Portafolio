@@ -5,6 +5,7 @@ import linkedinIcon from "../assets/images/linkedin.svg";
 import githubIcon from "../assets/images/github.svg";
 import itchioIcon from "../assets/images/itchio.svg";
 import cvIcon from "../assets/images/cv.svg";
+import emailIcon from "../assets/images/email.svg";
 
 defineProps<{
     contact: ContactInfo;
@@ -105,7 +106,7 @@ defineProps<{
                 aria-label="Email"
                 class="social-link"
             >
-                <span class="social-icon">✉️</span>
+                <img :src="emailIcon" alt="" class="social-icon-img" />
             </a>
         </div>
         <div class="footer-copy">

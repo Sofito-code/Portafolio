@@ -23,6 +23,7 @@ export const heroData: HeroData = {
     github: "https://github.com/Sofito-code",
     itch: "https://sofia-vc.itch.io/",
     cv: "https://drive.google.com/uc?export=download&id=1TOa5aOQVx66mw3-JLYVp5803WjZqvxkA",
+    email: "mailto:sofiavanegascordoba@gmail.com",
   },
   photoPath: fotoSofia,
 };
