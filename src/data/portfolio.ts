@@ -22,7 +22,7 @@ export const heroData: HeroData = {
     linkedin: "https://www.linkedin.com/in/sofia-vanegas-cordoba-unity-dev/",
     github: "https://github.com/Sofito-code",
     itch: "https://sofia-vc.itch.io/",
-    cv: "https://drive.google.com/uc?export=download&id=1TOa5aOQVx66mw3-JLYVp5803WjZqvxkA",
+    cv: "https://drive.google.com/uc?export=download&id=1C5b9EVHdxBAh0hfln0V0_BesmRBEW8za",
     email: "mailto:sofiavanegascordoba@gmail.com",
   },
   photoPath: fotoSofia,
