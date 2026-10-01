@@ -22,7 +22,7 @@ export const heroData: HeroData = {
     linkedin: "https://www.linkedin.com/in/sofia-vanegas-cordoba-unity-dev/",
     github: "https://github.com/Sofito-code",
     itch: "https://sofia-vc.itch.io/",
-    cv: "https://drive.google.com/uc?export=download&id=1C5b9EVHdxBAh0hfln0V0_BesmRBEW8za",
+    cv: "https://drive.google.com/uc?export=download&id=1O4IdEDm006tvTlQzEcF_WeJJiY2NLWSU",
     email: "mailto:sofiavanegascordoba@gmail.com",
   },
   photoPath: fotoSofia,
@@ -179,7 +179,7 @@ export const profileData: ProfileData = {
     {
       company: "Freelance",
       location: "Medellín, Colombia",
-      period: "Feb 2025 - Presente",
+      period: "Feb 2025 - Ago 2026",
       role: "Desarrolladora Unity",
       achievements: [
         "Convertí una prueba neuropsicológica de laboratorio en un juego Android accesible para una investigación de maestría, usando Unity y un diseño Low Poly agrícola para el público adulto mayor.",
@@ -213,13 +213,13 @@ export const profileData: ProfileData = {
     {
       institution: "Generation Colombia",
       location: "Medellín, COL",
-      period: "May 2026 - Presente",
+      period: "May 2026 - Ago 2026",
       degree: "Junior Unity Developer",
     },
     {
       institution: "Universidad de Antioquia",
       location: "Medellín, COL",
-      period: "Ago 2018 - Presente",
+      period: "Ago 2018 - Sep 2026",
       degree: "Ingeniería de Sistemas",
     },
     {
